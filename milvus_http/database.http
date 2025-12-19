@@ -1,0 +1,43 @@
+###
+# database list
+# curl -X POST 'http://localhost:19530/v2/vectordb/databases/list' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{}'
+POST http://localhost:19530/v2/vectordb/databases/list
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{}
+
+###
+# create database
+# curl -X POST 'http://localhost:19530/v2/vectordb/databases/create' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database",
+#  "properties": {
+#    "database.replica.number": 1
+#  }
+#}'
+POST http://localhost:19530/v2/vectordb/databases/create
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database",
+  "properties": {
+    "database.replica.number": 1
+  }
+}
+
+###
+# drop database
+# curl -X POST 'http://localhost:19530/v2/vectordb/databases/drop' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database"
+#}'
+POST http://localhost:19530/v2/vectordb/databases/drop
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database"
+}
+
+###
+

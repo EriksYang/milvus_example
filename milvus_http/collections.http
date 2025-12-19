@@ -1,0 +1,89 @@
+###
+# collections list
+# curl -X POST 'http://localhost:19530/v2/vectordb/collections/list' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database"
+#}'
+POST http://localhost:19530/v2/vectordb/collections/list
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database"
+}
+
+###
+# create collections
+# curl -X POST 'http://localhost:19530/v2/vectordb/collections/create' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database",
+#  "collectionName": "test_collection",
+#  "dimension": 5,
+#  "primaryField": "id",
+#  "vectorField": "vector"
+#}'
+POST http://localhost:19530/v2/vectordb/collections/create
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database",
+  "collectionName": "test_collection",
+  "dimension": 5,
+  "primaryField": "id",
+  "vectorField": "vector"
+}
+
+###
+# drop collections
+# curl -X POST 'http://localhost:19530/v2/vectordb/collections/drop' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database",
+#  "collectionName": "test_collection"
+#}'
+POST http://localhost:19530/v2/vectordb/collections/drop
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database",
+  "collectionName": "test_collection"
+}
+
+###
+# flush collections
+# curl -X POST 'http://localhost:19530/v2/vectordb/collections/flush' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database",
+#  "collectionName": "test_collection"
+#}'
+POST http://localhost:19530/v2/vectordb/collections/flush
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database",
+  "collectionName": "test_collection"
+}
+
+###
+# modify collection fields
+# curl -X POST 'http://localhost:19530/v2/vectordb/collections/fields/alter_properties' -H 'Content-Type: application/json' -H 'Authorization: Bearer root:Milvus' -d '{
+#  "dbName": "my_database",
+#  "collectionName": "test_collection",
+#  "fieldName": "my_varchar",
+#  "fieldParams": {
+#    "max_length": 100
+#  }
+#}'
+POST http://localhost:19530/v2/vectordb/collections/fields/alter_properties
+Authorization: Bearer root:Milvus
+Content-Type: application/json
+
+{
+  "dbName": "my_database",
+  "collectionName": "test_collection",
+  "fieldName": "my_varchar",
+  "fieldParams": {
+    "max_length": 100
+  }
+}
+
+###
+
